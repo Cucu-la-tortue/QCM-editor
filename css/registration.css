@@ -65,7 +65,7 @@ form label {
 
 .btn-submit {
     margin: auto;
-    margin-top: 1.25rem;
+    margin-top: .7rem;
     padding: .625rem 1.875rem;
     text-align: center;
     font-size: .9rem;
@@ -86,4 +86,23 @@ form label {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.9rem;
+}
+
+.alert {
+    margin-top: .7rem;
+    padding: 1rem 1.5rem;
+    border-radius: .3rem;
+    border: 1px solid;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #cde0d1;
+    display: none;
+}
+
+.alert-danger {
+    background-color: #f8d6d9;
+    border-color: #e7cdcf;
+    display: none;
 }

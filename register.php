@@ -41,7 +41,37 @@
         <a class="already-registered" href="login.html">Already registered ?</a>
     </section>
 
+    
+    <?php
+        if (isset($_POST['submit1'])) {
 
+            // On regarde si le nom d'utilisateur est déjà utilisé
+            $request = $bdd->query("SELECT * FROM registration WHERE username='$_POST[username]'") or die(print_r($bdd->errorInfo()));
+            $count = $request->rowCount(); # on compte le nombre de lignes contenant le pseudo
+            
+            // Si le pseudo est déjà utilisé, on affiche un message d'erreur
+            if ($count > 0) {
+                ?>
+                <script type="text/javascript">
+                    document.getElementById("success").style.display="none";
+                    document.getElementById("failure").style.display="block";
+                </script>
+                <?php
+            }
+
+            // Sinon, on enregistre le nom d'utilisateur dans la base de données
+            else {
+                $bdd->exec("INSERT INTO registration(firstname, lastname, username, password, email, contact) VALUES('$_POST[firstname]', '$_POST[lastname]', '$_POST[username]', '$_POST[password]', '$_POST[email]', '$_POST[contact]')") or die(print_r($bdd->errorInfo()));
+                ?>
+                <script type="text/javascript">
+                    document.getElementById("failure").style.display="none";
+                    document.getElementById("success").style.display="block";
+                </script>
+                <?php
+            }
+        }
+
+    ?> 
 
 
 </body>
