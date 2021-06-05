@@ -4,34 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>QCM In The City</title>
+    <!------- CSS ------>
+    <!-- Index -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Navbar -->
+    <link rel="stylesheet" href="./css/navbar.css">
+    <!-- Footer -->
+    <link rel="stylesheet" href="./css/footer.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo.svg" type="image/svg">
+    <!-- Title -->
+    <title>QCM Editor</title>
 </head>
 <body>
-  <div class="container">
-    <header>
-        <div class='qcm-logo'>
-          <!-- insérer le logo -->
-          <h2>Votre QCM</h2>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="">Sign in</a></li>
-            <li><a href="">Log in</a></li>
-          </ul>
-        </nav>
-      </header>
-    
-      <div>
-        <h1>Votre QCM en ligne</h1>
-        <p>Vous voici dans votre site de QCM en ligne. Ici, résolvez vos QCM personnalisés et faites le tester à vos amis !</p>
-        <a href="">Voir plus</a>
-        <a href="">Résolvez votre QCM</a>
-      </div>
-       
-      <section>
-        <img src="" alt="Exemple de QCM">
-      </section>
+        <header>
+            <div class="qcm-header__logo">
+                <img src="./assets/logo.svg" alt="logo" />
+                <h3>QCM Editor</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Exams</a></li>
+                    <li><a href="#">Results</a></li>
+                    <li><a href="#" class="btn btn--header">Log out</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <div class="container">
+        <section class="qcm-actions">
+            <h1>Home</h1>
+            <p class="qcm-actions__presentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque voluptatum voluptate quaerat quisquam itaque vitae quos adipisci explicabo consequatur?</p>
+            <ul class="qcm-actions__all-actions">
+                <li>
+                    <div class="qcm-actions__title">
+                        <h2>Select an exam</h2>
+                        <img src="./assets/exam-icon.svg" alt="icon">
+                    </div>
+                    <p class="qcm-actions__details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, atque.</p>
+                    <a href="#" class="btn btn--actions">Click here</a>
+                    
+                </li>
+                <li>
+                    <div class="qcm-actions__title">
+                        <h2>View last results</h2>
+                        <img src="./assets/results-icon.svg" alt="icon">
+                    </div>
+                    <p class="qcm-actions__details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
+                    <a href="#" class="btn btn--actions">Click here</a>
+                </li>
+                <li>
+                    <div class="qcm-actions__title">
+                        <h2>Log out</h2>
+                        <img src="./assets/exit-icon.svg" alt="icon">
+                    </div>
+                    <p class="qcm-actions__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ut?</p>
+                    <a href="#" class="btn btn--actions">Click here</a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2021 — In the Cyti</p>
+            <p>By Cyprien and Timothée</p>
+        </footer>
     </div>
+    
 </body>
 </html>
