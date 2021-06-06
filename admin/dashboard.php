@@ -8,12 +8,12 @@ include './partials/header.php';
 <!-- CONTENT -->
 <div class="container">
     <section class="qcm-actions">
-        <h1>Home</h1>
+        <h1>Dashboard</h1>
         <p class="qcm-actions__presentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque voluptatum voluptate quaerat quisquam itaque vitae quos adipisci explicabo consequatur?</p>
         <ul class="qcm-actions__all-actions">
             <li>
                 <div class="qcm-actions__title">
-                    <h2>Select an exam</h2>
+                    <h2>Edit exams</h2>
                     <img src="./assets/exam-icon.svg" alt="icon">
                 </div>
                 <p class="qcm-actions__details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, atque.</p>

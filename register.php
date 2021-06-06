@@ -50,7 +50,8 @@
         if (isset($_POST['btn-register'])) {
 
             // On regarde si le nom d'utilisateur est déjà utilisé
-            $request = $bdd->query("SELECT * FROM registration WHERE username='$_POST[username]'") or die(print_r($bdd->errorInfo()));
+            $request = $bdd->prepare("SELECT * FROM registration WHERE username = ?") or die(print_r($bdd->errorInfo()));
+            $request->execute(array($_POST[username]));
             $count = $request->rowCount(); # on compte le nombre de lignes contenant le pseudo
             
             // Si le pseudo est déjà utilisé, on affiche un message d'erreur

@@ -1,0 +1,7 @@
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    font-weight: bold;
+}

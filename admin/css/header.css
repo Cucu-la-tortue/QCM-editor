@@ -1,0 +1,47 @@
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qcm-header__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header h3 {
+    color: #233348;
+    font-size: 1.3rem;
+}
+
+header img {
+    max-width: 2rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 3rem;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    font-size: 1.1rem;
+    line-height: 23px;
+    text-decoration: none;
+    color: #1F1534;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #1F1534;
+}
+
+.btn--header {
+    padding: .7rem 2rem;
+}
