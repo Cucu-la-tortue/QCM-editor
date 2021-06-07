@@ -118,7 +118,7 @@ while ($row = $request->fetch()) {
 
         ?>
         <script type='text/javascript'>
-            window.location = "exams.php";
+            window.location.href = window.location.href;
         </script>
         <?php
     }

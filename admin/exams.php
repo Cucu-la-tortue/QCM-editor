@@ -31,7 +31,7 @@ include '../connection.php';
                         $count=0;
                         $request = $bdd->query("SELECT * FROM exam_category") or die(print_r($bdd->errorInfo()));
                         while ($row = $request->fetch()) {
-                            $count++
+                            $count++;
                             ?>
                             <tr>
                                 <td><?php echo $count;?></td>
