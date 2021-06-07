@@ -33,7 +33,7 @@ include 'header.php';
                     <h2>Log out</h2>
                     <img src="./assets/exit-icon.svg" alt="icon">
                 </div>
-                <p class="dashboard__details">Satisfied with your session? See you later on QCM Maker!</p>
+                <p class="dashboard__details">Satisfied? See you later on QCM Maker!</p>
                 <a href="#" class="btn btn--dashboard">Tschuss</a>
             </li>
         </ul>
