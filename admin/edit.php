@@ -14,12 +14,12 @@ while ($row = $request->fetch()) {
 <div class="container">
     <section class="exams">
         <h1>Edit exams</h1>
-        <p class="exams__presentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque voluptatum voluptate quaerat quisquam itaque vitae quos adipisci explicabo consequatur?</p>
+        <p class="exams__presentation">Here are your different QCUs. You can modify them to make it more challenging for your students.</p>
         <ul>
             <li>
                 <div class="exams__title">
                     <h2>Edit <?php echo $exam_name; ?></h2>
-                    <p class="exams__details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
+                    <p class="exams__details">Change the name and timer of your exam <?php echo $exam_name; ?>.</p>
                 </div>
                 <form action="" method="post">
                     <div class="box-input-label">
@@ -37,7 +37,7 @@ while ($row = $request->fetch()) {
             <li>
                 <div class="exams__title">
                     <h2>Add questions to <?php echo $exam_name; ?></h2>
-                    <p class="exams__details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
+                    <p class="exams__details">Add and remove questions from your QCU</p>
                 </div>
                 <form action="" method="post" class="exam__question-form">
                     <div class="box-input-label box-input-label--question">

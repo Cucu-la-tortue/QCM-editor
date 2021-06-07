@@ -10,12 +10,12 @@ include '../connection.php';
 <div class="container">
     <section class="exams">
         <h1>Exams</h1>
-        <p class="exams__presentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque voluptatum voluptate quaerat quisquam itaque vitae quos adipisci explicabo consequatur?</p>
+        <p class="exams__presentation">Here you are on the page where you can find all your prepared exams. You can create new ones or remove them as you wish.</p>
         <ul class="exams__all-actions">
             <li>
                 <div class="exams__title">
                     <h2>Your exams</h2>
-                    <p class="exams__details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
+                    <p class="exams__details">Main informations of your MCQs</p>
                 </div>
                 <table class="exams__all-exams">
                     <thead>
@@ -49,7 +49,7 @@ include '../connection.php';
             <li>
                 <div class="exams__title">
                     <h2>Add an exam</h2>
-                    <p class="exams__details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, atque.</p>
+                    <p class="exams__details">Create a new MCQ with simplicity.</p>
                 </div>
                 <form action="" class="exams__new-exam" method="post" name="form2">
                     <div class="box-input-label">
@@ -67,7 +67,7 @@ include '../connection.php';
             <li>
                 <div class="exams__title">
                     <h2>Edit an exam</h2>
-                    <p class="exams__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ut?</p>
+                    <p class="exams__details">You are no longer satisfied? Feel free to modify your MCQs for more fun!</p>
                 </div>
                 <form action="" method="post" name="form3" class="exams__drop-down-menu">
                     <label for="exam-choice" style="display:none;"></label>
