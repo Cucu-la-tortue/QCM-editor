@@ -9,15 +9,15 @@ include 'header.php';
 <div class="container">
     <section class="qcm-actions">
         <h1>Home</h1>
-        <p class="qcm-actions__presentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque voluptatum voluptate quaerat quisquam itaque vitae quos adipisci explicabo consequatur?</p>
+        <p class="qcm-actions__presentation">Welcome to your online MCQ site. Here you will find all the MCQs put online by your teacher.</p>
         <ul class="qcm-actions__all-actions">
             <li>
                 <div class="qcm-actions__title">
                     <h2>Select an exam</h2>
                     <img src="./assets/exam-icon.svg" alt="icon">
                 </div>
-                <p class="qcm-actions__details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, atque.</p>
-                <a href="#" class="btn btn--actions">Click here</a>
+                <p class="qcm-actions__details">Here are all the assignments posted by your teacher. Choose your subject and pay careful attention to time! </p>
+                <a href="#" class="btn btn--actions">Select</a>
                 
             </li>
             <li>
@@ -25,16 +25,16 @@ include 'header.php';
                     <h2>View last results</h2>
                     <img src="./assets/results-icon.svg" alt="icon">
                 </div>
-                <p class="qcm-actions__details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
-                <a href="#" class="btn btn--actions">Click here</a>
+                <p class="qcm-actions__details">Want to see your results? It's not impossible. You will find the results of your previous exams here.</p>
+                <a href="#" class="btn btn--actions">Results</a>
             </li>
             <li>
                 <div class="qcm-actions__title">
                     <h2>Log out</h2>
                     <img src="./assets/exit-icon.svg" alt="icon">
                 </div>
-                <p class="qcm-actions__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ut?</p>
-                <a href="#" class="btn btn--actions">Click here</a>
+                <p class="qcm-actions__details">Session over? Don't forget to log out! See you soon on QCM Maker.</p>
+                <a href="#" class="btn btn--actions">Tschuss</a>
             </li>
         </ul>
     </section>
