@@ -19,7 +19,7 @@ while ($row = $request->fetch()) {
             <li>
                 <div class="exams__title">
                     <h2>Sum Up</h2>
-                    <p class="exams__details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
+                    <p class="exams__details">Questions of <?php echo $exam_name; ?></p>
                 </div>
                 <table class="exams__all-questions">
                     <thead>
