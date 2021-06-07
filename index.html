@@ -4,72 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!------- CSS ------>
-    <!-- Index -->
+    <title>QCM Maker</title>
+    <!-- Css -->
+    <!-- index -->
     <link rel="stylesheet" href="./css/index.css">
-    <!-- Navbar -->
+    <!-- header -->
     <link rel="stylesheet" href="./css/header.css">
-    <!-- Footer -->
-    <link rel="stylesheet" href="./css/footer.css">
-    <!-- Favicon -->
-    <link rel="icon" href="assets/logo.svg" type="image/svg">
-    <!-- Title -->
-    <title>QCM Editor</title>
 </head>
 <body>
-        <header>
-            <div class="qcm-header__logo">
-                <img src="./assets/logo.svg" alt="logo" />
-                <h3>QCM Editor</h3>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Exams</a></li>
-                    <li><a href="#">Results</a></li>
-                    <li><a href="#" class="btn btn--header">Log out</a></li>
-                </ul>
-            </nav>
-        </header>
-
-    <div class="container">
-        <section class="qcm-actions">
-            <h1>Home</h1>
-            <p class="qcm-actions__presentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque voluptatum voluptate quaerat quisquam itaque vitae quos adipisci explicabo consequatur?</p>
-            <ul class="qcm-actions__all-actions">
-                <li>
-                    <div class="qcm-actions__title">
-                        <h2>Select an exam</h2>
-                        <img src="./assets/exam-icon.svg" alt="icon">
-                    </div>
-                    <p class="qcm-actions__details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, atque.</p>
-                    <a href="#" class="btn btn--actions">Click here</a>
-                    
-                </li>
-                <li>
-                    <div class="qcm-actions__title">
-                        <h2>View last results</h2>
-                        <img src="./assets/results-icon.svg" alt="icon">
-                    </div>
-                    <p class="qcm-actions__details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
-                    <a href="#" class="btn btn--actions">Click here</a>
-                </li>
-                <li>
-                    <div class="qcm-actions__title">
-                        <h2>Log out</h2>
-                        <img src="./assets/exit-icon.svg" alt="icon">
-                    </div>
-                    <p class="qcm-actions__details">Lorem vhvhv dolor sit amet consectetur adipisicing elit. Recusandae, ut?</p>
-                    <a href="#" class="btn btn--actions">Click here</a>
-                </li>
-            </ul>
-        </section>
-
-        <footer>
-            <p>&copy; 2021 — In the Cyti</p>
-            <p>By Cyprien and Timothée</p>
-        </footer>
+  <header>
+    <div class="qcm-header__logo">
+        <img src="./assets/logo.svg" alt="logo" />
+        <h3>QCM Maker</h3>
     </div>
+    <nav>
+        <ul>
+            <li><a href="login.php">Sign in</a></li>
+            <li><a href="register.php" class="btn btn--header">Sign up</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <section class= 'main-page'>
+
+    <div class='qcm__presentation'>
+      <div class='title'>
+        <img src="./assets/logo.svg" alt="logo">
+        <h1>Votre QCM en ligne</h1>
+      </div>
+      <p>Vous voici dans votre site de QCM en ligne. Ici, résolvez vos QCM personnalisés et faites le tester à vos amis !</p>
+      <img src="./assets/illustration.png" alt="illustration">
+    </div>
+    <div class='qcm-action-box'>
+      <div class="qcm-actions__title">
+          <h2>Log out</h2>
+          <img src="./assets/exit-icon.svg" alt="icon">
+      </div>
+      <p class="qcm-actions__details">Session over? Don't forget to log out! See you soon on QCM Maker.</p>
+      <a href="#" class="btn btn--actions">Tschuss</a>
+    </div>
+
+  </section>
+
     
-</body>
+  </body>
 </html>
