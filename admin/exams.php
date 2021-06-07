@@ -96,7 +96,6 @@ include '../connection.php';
 
             ?>
             <script type="text/javascript">
-                window.alert("Success ! Exam added successfully.");
                 window.location.href = window.location.href;
             </script>
             <?php
@@ -105,7 +104,6 @@ include '../connection.php';
         else {
             ?>
             <script type="text/javascript">
-                window.alert("Invalid ! Please enter a name and a time for the exam.");
                 window.location.href = window.location.href;
             </script>
             <?php
@@ -121,11 +119,13 @@ include '../connection.php';
                 $id = $data['id'];
             }
 
-            ?>
-            <script type="text/javascript">
-                window.location.href = 'edit.php?id=<?php echo $id; ?>';
-            </script>
-            <?php
+            if (isset($id)) {
+                ?>
+                <script type="text/javascript">
+                    window.location.href = 'edit.php?id=<?php echo $id; ?>';
+                </script>
+                <?php
+            }
         }
     }
     ?>

@@ -59,7 +59,7 @@ form {
     gap: 2.2rem;
 }
 
-form .box-input-label input {
+.box-input-label input {
     height: 2.5rem;
     font-size: .85rem;
     border-radius: .6rem;
@@ -67,7 +67,7 @@ form .box-input-label input {
     padding: 0 .8rem;
 }
 
-form input:focus {
+form input:focus, select:focus {
     outline: none;
     border-width: 2px;
     border-color: #560094;
@@ -287,23 +287,20 @@ input[type=number] {
     margin-bottom: 1rem;
 }
 
+.exam__question-form {
+    min-width: 40%;
+}
 
-
-
-
-
-
-
-
-
-/* EDIT PAGE */
-.exam__edit-form {
+.box-input-label--answer {
     display: flex;
     flex-direction: column;
-    min-width: 10rem;
-    list-style-type: none;
-    padding: 2rem 3rem;
-    border: 1px solid rgba(168, 168, 168, 0.2);
-    border-radius: 2rem;
-    box-shadow: 0 2.5rem 5rem rgba(86, 0, 148, 0.2);
+}
+
+.box-input-label--answer select {
+    height: 2.5rem;
+    font-size: 1rem;
+    border-radius: .6rem;
+    border: solid grey 1px;
+    padding: 0 .8rem;
+    width: fit-content;
 }
