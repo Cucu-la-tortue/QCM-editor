@@ -27,7 +27,30 @@
                 <li><a href="dashboard.php">Home</a></li>
                 <li><a href="select_exam.php">Exams</a></li>
                 <li><a href="#">Results</a></li>
-                <li><a href="#" class="btn btn--header">Log out</a></li>
+                <li><a href="logout.php" class="btn btn--header">Log out</a></li>
             </ul>
         </nav>
+        <script type="text/javascript">
+            setInterval(function(){
+                timer();
+            }, 1000);
+            function timer()
+            {
+                var xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+                        if(xmlhttp.responseText=="00:00:01")
+                        {
+                            window.location="result.php";
+                        }
+
+                        document.getElementById("countdowntimer").innerHTML=xmlhttp.responseText;
+
+                    }
+                };
+                xmlhttp.open("GET","forajax/load_timer.php", true);
+                xmlhttp.send(null);
+            }
+        </script>
     </header>

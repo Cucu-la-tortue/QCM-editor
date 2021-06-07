@@ -15,6 +15,10 @@ body {
     margin: 1.5rem 6rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -23,11 +27,21 @@ body {
     margin-top: 3rem;
 }
 
+
+
+
+
+/* BUTTONS */
+input[type="button"] {
+    border: none;
+}
+
 .btn {
     background-color: dodgerblue;
     color: white;
     border-radius: 1.2rem;
     transition: .4s;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -107,4 +121,106 @@ body {
     font-weight: bold;
     margin: auto;
     margin-top: 3rem;
+}
+
+
+
+
+
+/* SELECT EXAM PAGE */
+.exams__all-exams {
+    table-layout: auto;
+    width: 50%;
+    margin: auto;
+    border-collapse:separate; 
+    border-spacing: .7rem;
+}
+
+.exams h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+}
+
+.exams__presentation {
+    margin: auto;
+    text-align: center;
+    max-width: 50vw;
+    font-size: 1rem;
+    color: #7D7987;
+    margin-bottom: 3rem;
+}
+
+.exams__box-all-exams {
+    display: flex;
+    flex-direction: column;
+    min-width: 10rem;
+    list-style-type: none;
+    padding: 2rem 3rem;
+    border: 1px solid rgba(168, 168, 168, 0.2);
+    border-radius: 2rem;
+    box-shadow: 0 2.5rem 5rem rgba(86, 0, 148, 0.2);
+}
+
+.exams__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.exams__title h2 {
+    margin: 0;
+}
+
+.exams__title p {
+    margin: 0;
+    opacity: .8;
+}
+
+.exams__all-exams thead {
+    font-size: 1.2rem;
+}
+
+.exams__all-exams thead th {
+    text-align: left;
+}
+
+.exams__all-exams thead tr th:nth-child(1) {
+    width: 15%;
+}
+
+.exams__all-exams thead tr th:nth-child(2) {
+    width: 45%;
+}
+
+.exams__all-exams thead tr th:nth-child(3) {
+    width: 15%;
+}
+
+.exams__all-exams thead tr th:nth-child(4) {
+    width: 35%;
+}
+
+.exams__all-exams tbody tr td:last-child {
+    text-align: right;
+}
+
+.exams__all-exams tbody::before {
+    content: "-";
+    display: block;
+    line-height: .3rem;
+    color: transparent;
+}
+
+.btn--delete {
+    padding: .4rem 1rem;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+#countdowntimer {
+    text-align: right;
 }

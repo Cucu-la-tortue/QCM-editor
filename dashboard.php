@@ -1,5 +1,6 @@
 <!-- INCLUDE HEADER -->
 <?php
+session_start();
 include 'header.php';
 ?>
 
@@ -8,7 +9,7 @@ include 'header.php';
 <!-- CONTENT -->
 <div class="container">
     <section class="qcm-actions">
-        <h1>Home</h1>
+        <h1>Hi <?php echo $_SESSION['username'];?> !</h1>
         <p class="qcm-actions__presentation">Welcome to your online MCQ site. Here you will find all the MCQs put online by your teacher.</p>
         <ul class="qcm-actions__all-actions">
             <li>
@@ -17,7 +18,7 @@ include 'header.php';
                     <img src="./assets/exam-icon.svg" alt="icon">
                 </div>
                 <p class="qcm-actions__details">Here are all the assignments posted by your teacher. Choose your subject and pay careful attention to time! </p>
-                <a href="#" class="btn btn--actions">Select</a>
+                <a href="select_exam.php" class="btn btn--actions">Select</a>
                 
             </li>
             <li>
@@ -34,7 +35,7 @@ include 'header.php';
                     <img src="./assets/exit-icon.svg" alt="icon">
                 </div>
                 <p class="qcm-actions__details">Session over? Don't forget to log out! See you soon on QCM Maker.</p>
-                <a href="#" class="btn btn--actions">Tschuss</a>
+                <a href="logout.php" class="btn btn--actions">Tschuss</a>
             </li>
         </ul>
     </section>
