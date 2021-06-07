@@ -69,7 +69,7 @@
                     $bdd->exec("INSERT INTO registration(firstname, lastname, username, password) VALUES('$_POST[firstname]', '$_POST[lastname]', '$_POST[username]', '$_POST[password]')") or die(print_r($bdd->errorInfo()));
                     ?>
                     <script type="text/javascript">
-                        window.location = "demo.php";
+                        window.location = "dashboard.php";
                     </script>
                     <?php
                 }

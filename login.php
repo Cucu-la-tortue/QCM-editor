@@ -57,7 +57,7 @@ include "connection.php";
 
                 ?>
                 <script type="text/javascript">
-                    window.location = "demo.php";
+                    window.location = "dashboard.php";
                 </script>
                 <?php
             }
