@@ -17,7 +17,7 @@ include 'header.php';
                     <img src="./assets/exam-icon.svg" alt="icon">
                 </div>
                 <p class="dashboard__details">Edit exams freely to create the toughest MCQs ever.</p>
-                <a href="#" class="btn btn--dashboard">Select</a>
+                <a href="exams.php" class="btn btn--dashboard">Select</a>
                 
             </li>
             <li>

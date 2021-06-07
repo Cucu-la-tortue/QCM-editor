@@ -24,8 +24,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Exams</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="exams.php">Exams</a></li>
                 <li><a href="#">Results</a></li>
                 <li><a href="#" class="btn btn--header">Log out</a></li>
             </ul>
