@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!------- CSS ------>
     <!-- Index -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <!-- Navbar -->
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="./css/header.css">
     <!-- Footer -->
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <!-- Favicon -->
     <link rel="icon" href="assets/logo.svg" type="image/svg">
     <!-- Title -->

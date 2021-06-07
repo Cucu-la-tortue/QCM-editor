@@ -8,7 +8,7 @@ include "connection.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" type="text/css" href="./css/register.css">
     <title>Login</title>
 </head>
 <body>
@@ -52,7 +52,11 @@ include "connection.php";
 
             // Sinon, on enregistre le nom d'utilisateur dans la base de données
             else {
-                header('Location : demo.php');
+                ?>
+                <script type="text/javascript">
+                    window.location = "demo.php";
+                </script>
+                <?php
             }
         }
 

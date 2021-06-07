@@ -34,10 +34,6 @@
             <input class='btn-submit' name="btn-register" type="submit" value="Register">
         </form>
 
-        <div class="alert alert-success" id="success">
-            <strong>Success !</strong> Account registration successfully.
-        </div>
-
         <div class="alert alert-danger" id="failure">
             <strong>Already exist !</strong> This username already exist.
         </div>
@@ -51,14 +47,13 @@
 
             // On regarde si le nom d'utilisateur est déjà utilisé
             $request = $bdd->prepare("SELECT * FROM registration WHERE username = ?") or die(print_r($bdd->errorInfo()));
-            $request->execute(array($_POST[username]));
+            $request->execute(array($_POST['username']));
             $count = $request->rowCount(); # on compte le nombre de lignes contenant le pseudo
             
             // Si le pseudo est déjà utilisé, on affiche un message d'erreur
             if ($count > 0) {
                 ?>
                 <script type="text/javascript">
-                    document.getElementById("success").style.display="none";
                     document.getElementById("failure").style.display="block";
                 </script>
                 <?php
@@ -69,8 +64,7 @@
                 $bdd->exec("INSERT INTO registration(firstname, lastname, username, password) VALUES('$_POST[firstname]', '$_POST[lastname]', '$_POST[username]', '$_POST[password]')") or die(print_r($bdd->errorInfo()));
                 ?>
                 <script type="text/javascript">
-                    document.getElementById("failure").style.display="none";
-                    document.getElementById("success").style.display="block";
+                    window.location = "demo.php";
                 </script>
                 <?php
             }

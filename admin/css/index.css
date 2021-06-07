@@ -15,6 +15,10 @@ body {
     margin: 1.5rem 6rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -23,16 +27,23 @@ body {
     margin-top: 3rem;
 }
 
+
+
+
+
+/* BUTTONS */
 .btn {
     background-color: #560094;
     color: white;
     border-radius: 1.2rem;
     transition: .4s;
+    border: none;
 }
 
 .btn:hover {
     background-color: #2e004e;
     transition: .4s;
+    cursor: pointer;
     border: none;
 }
 
@@ -40,16 +51,65 @@ body {
 
 
 
+/* FORMS */
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 2.2rem;
+}
+
+form .box-input-label input {
+    height: 2.5rem;
+    font-size: .85rem;
+    border-radius: .6rem;
+    border: solid grey 1px;
+    padding: 0 .8rem;
+}
+
+form input:focus {
+    outline: none;
+    border-width: 2px;
+    border-color: #560094;
+}
+
+form label {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.box-input-label {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hide arrows from input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 
-/* LANDING PAGE */
-.qcm-actions h1 {
+
+
+
+
+
+/* DASHBOARD */
+.dashboard h1, .exams h1 {
     text-align: center;
     font-size: 3rem;
     margin: 0 0 1rem 0;
 }
 
-.qcm-actions__presentation {
+.dashboard__presentation {
     margin: auto;
     text-align: center;
     max-width: 50vw;
@@ -58,13 +118,13 @@ body {
     margin-bottom: 3rem;
 }
 
-.qcm-actions ul {
+.dashboard ul {
     display: flex;
     justify-content: space-between;
     gap: 5vw;
 }
 
-.qcm-actions li {
+.dashboard li {
     display: flex;
     flex-direction: column;
     min-width: 10rem;
@@ -75,7 +135,7 @@ body {
     box-shadow: 0 2.5rem 5rem rgba(86, 0, 148, 0.2);
 }
 
-.qcm-actions__title {
+.dashboard__title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,23 +143,167 @@ body {
     gap: 1rem;
 }
 
-.qcm-actions__title img {
+.dashboard__title img {
     max-width: 5rem;
 }
 
-.qcm-actions li p {
+.dashboard li p {
     margin: 0;
     opacity: .8;
 }
 
-.qcm-actions li a {
-    text-decoration: none;
-}
-
-.btn--actions {
+.btn--dashboard {
     padding: .4rem .9rem;
-    font-size: 1.8rem;
-    font-weight: no;
+    font-size: .8rem;
+    font-weight: bold;
     margin: auto;
     margin-top: 3rem;
+}
+
+
+
+
+
+
+
+
+
+/* EXAMS */
+.exams__presentation {
+    margin: auto;
+    text-align: center;
+    max-width: 50vw;
+    font-size: 1rem;
+    color: #7D7987;
+    margin-bottom: 3rem;
+}
+
+.exams ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 9rem;
+    margin-top: 4rem;
+    margin-bottom: 10rem;
+}
+
+.exams ul li {
+    display: flex;
+    flex-direction: column;
+    min-width: 10rem;
+    list-style-type: none;
+    padding: 2rem 3rem;
+    border: 1px solid rgba(168, 168, 168, 0.2);
+    border-radius: 2rem;
+    box-shadow: 0 2.5rem 5rem rgba(86, 0, 148, 0.2);
+}
+
+.exams__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.exams__title h2 {
+    margin: 0;
+}
+
+.exams__title p {
+    margin: 0;
+    opacity: .8;
+}
+
+.btn--exams {
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    font-weight: bold;
+    margin: auto;
+}
+
+.exams__new-exam {
+    min-width: 20%;
+}
+
+.exams__all-exams {
+    table-layout: auto;
+    width: 40%;
+    margin: auto;
+    border-collapse:separate; 
+    border-spacing: .7rem;
+}
+
+.exams__all-exams thead {
+    font-size: 1.2rem;
+}
+
+
+/* TABLE HEADER TITLES */
+.exams__all-exams thead tr th:nth-child(1) {
+    width: 15%;
+}
+
+.exams__all-exams thead tr th:nth-child(2) {
+    width: 45%;
+}
+
+.exams__all-exams thead tr th:nth-child(3) {
+    width: 15%;
+}
+
+.exams__all-exams thead tr th:nth-child(4) {
+    width: 35%;
+}
+
+
+.exams__all-exams tbody tr td:last-child {
+    text-align: right;
+}
+
+.exams__all-exams tbody::before {
+    content: "-";
+    display: block;
+    line-height: .3rem;
+    color: transparent;
+}
+
+.btn--delete {
+    padding: .4rem 1rem;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+
+
+
+/* EDIT EXAM BOX */
+.exam-choice {
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(168, 168, 168, 0.2);
+    border-radius: 2rem;
+    box-shadow: 0 1rem 5rem rgba(86, 0, 148, 0.4);
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* EDIT PAGE */
+.exam__edit-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 10rem;
+    list-style-type: none;
+    padding: 2rem 3rem;
+    border: 1px solid rgba(168, 168, 168, 0.2);
+    border-radius: 2rem;
+    box-shadow: 0 2.5rem 5rem rgba(86, 0, 148, 0.2);
 }

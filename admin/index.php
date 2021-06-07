@@ -50,9 +50,13 @@ include "../connection.php";
                 <?php
             }
 
-            // Sinon, on enregistre le nom d'utilisateur dans la base de données
+            // Sinon, on accède au dashboard
             else {
-                header('Location : demo.php');
+                ?>
+                <script>
+                    window.location = "dashboard.php";
+                </script>
+                <?php
             }
         }
 
