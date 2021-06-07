@@ -125,6 +125,7 @@ input[type=number] {
 }
 
 .dashboard li {
+    flex: 3;
     display: flex;
     flex-direction: column;
     min-width: 10rem;
@@ -133,6 +134,10 @@ input[type=number] {
     border: 1px solid rgba(168, 168, 168, 0.2);
     border-radius: 2rem;
     box-shadow: 0 2.5rem 5rem rgba(86, 0, 148, 0.2);
+}
+
+.dashboard li:last-child{
+    flex: 2;
 }
 
 .dashboard__title {

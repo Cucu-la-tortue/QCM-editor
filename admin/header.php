@@ -14,13 +14,13 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/logo.svg" type="image/svg">
     <!-- Title -->
-    <title>QCM Editor</title>
+    <title>QCM Maker</title>
 </head>
 <body>
     <header>
         <div class="qcm-header__logo">
             <img src="./assets/logo.svg" alt="logo" />
-            <h3>QCM Editor</h3>
+            <h3>QCM Maker</h3>
         </div>
         <nav>
             <ul>
