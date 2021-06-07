@@ -37,7 +37,7 @@ include '../connection.php';
                                 <td><?php echo $count;?></td>
                                 <td><?php echo $row['name'];?></td>
                                 <td><?php echo $row['time'];?></td>
-                                <td><a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn--delete">Delete</a></td>
+                                <td><a href="deleteExam.php?id=<?php echo $row['id'];?>" class="btn btn--delete">Delete</a></td>
                             </tr>
                             <?php
                         }

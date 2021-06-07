@@ -13,9 +13,49 @@ while ($row = $request->fetch()) {
 
 <div class="container">
     <section class="exams">
-        <h1>Edit exams</h1>
+        <h1><?php echo $exam_name; ?></h1>
         <p class="exams__presentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque voluptatum voluptate quaerat quisquam itaque vitae quos adipisci explicabo consequatur?</p>
         <ul>
+            <li>
+                <div class="exams__title">
+                    <h2>Sum Up</h2>
+                    <p class="exams__details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
+                </div>
+                <table class="exams__all-questions">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Question</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $request = $bdd->query("SELECT * FROM questions WHERE name='$exam_name'") or die(print_r($bdd->errorInfo()));
+                        while ($row = $request->fetch()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $row['question_no'];?></td>
+                                <td><?php echo $row['question'];?></td>
+                                <td id="optA<?php echo $row['question_no'];?>"><?php echo $row['optA'];?></td>
+                                <td id="optB<?php echo $row['question_no'];?>"><?php echo $row['optB'];?></td>
+                                <td id="optC<?php echo $row['question_no'];?>"><?php echo $row['optC'];?></td>
+                                <td><a href="deleteQuestion.php?id_question=<?php echo $row['id']?>&name_exam=<?php echo $exam_name;?>" class="btn btn--delete">Delete</a></td>
+                                <script type="text/javascript">
+                                    document.getElementById("opt<?php echo $row['answer'] . $row['question_no'];?>").style.color="#560094";
+                                    document.getElementById("opt<?php echo $row['answer'] . $row['question_no'];?>").style.fontWeight="bold";
+                                </script>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </li>
+
             <li>
                 <div class="exams__title">
                     <h2>Edit <?php echo $exam_name; ?></h2>
@@ -45,16 +85,16 @@ while ($row = $request->fetch()) {
                         <input type="text" name="question" placeholder="What is the capital of France ?">
                     </div>
                     <div class="box-input-label box-input-label--question">
-                        <label for="opt1">Option 1</label>
-                        <input type="text" name="opt1" placeholder="Marseille">
+                        <label for="optA">Option A</label>
+                        <input type="text" name="optA" placeholder="Marseille">
                     </div>
                     <div class="box-input-label box-input-label--question">
-                        <label for="opt2">Option 2</label>
-                        <input type="text" name="opt2" placeholder="Paris">
+                        <label for="optB">Option B</label>
+                        <input type="text" name="optB" placeholder="Paris">
                     </div>
                     <div class="box-input-label box-input-label--question">
-                        <label for="opt3">Option 3</label>
-                        <input type="text" name="opt3" placeholder="Versailles">
+                        <label for="optC">Option c</label>
+                        <input type="text" name="optC" placeholder="Versailles">
                     </div>
                     <div class="box-input-label--answer">
                         <label for="answer">Answer</label>
@@ -84,7 +124,7 @@ while ($row = $request->fetch()) {
     }
 
     elseif (isset($_POST['submit2'])) {
-        if ($_POST['question']!=NULL AND $_POST['opt1']!=NULL AND $_POST['opt2']!=NULL AND $_POST['opt3']!=NULL AND $_POST['answer']!=NULL) {
+        if ($_POST['question']!=NULL AND $_POST['optA']!=NULL AND $_POST['optB']!=NULL AND $_POST['optC']!=NULL AND $_POST['answer']!=NULL) {
             $loop = 0;
             $count = 0;
             $request = $bdd->query("SELECT * FROM questions WHERE name = '$exam_name' ORDER BY id ASC") or die(print_r($bdd->errorInfo()));
@@ -99,13 +139,13 @@ while ($row = $request->fetch()) {
             }
 
             $loop = $loop + 1;
-            $request3 = $bdd->prepare("INSERT INTO questions(question_no, question, opt1, opt2, opt3, answer, name) VALUES(:question_no, :question, :opt1, :opt2, :opt3, :answer, :name)") or die(print_r($bdd->errorInfo()));
+            $request3 = $bdd->prepare("INSERT INTO questions(question_no, question, optA, optB, optC, answer, name) VALUES(:question_no, :question, :optA, :optB, :optC, :answer, :name)") or die(print_r($bdd->errorInfo()));
             $request3->execute(array(
                 'question_no' => $loop,
                 'question' => $_POST['question'],
-                'opt1' => $_POST['opt1'],
-                'opt2' => $_POST['opt2'],
-                'opt3' => $_POST['opt3'],
+                'optA' => $_POST['optA'],
+                'optB' => $_POST['optB'],
+                'optC' => $_POST['optC'],
                 'answer' => $_POST['answer'],
                 'name' => $exam_name
             ));

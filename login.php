@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "connection.php";
 ?>
 
@@ -52,6 +53,8 @@ include "connection.php";
 
             // Sinon, on enregistre le nom d'utilisateur dans la base de données
             else {
+                $_SESSION['username'] = $_POST['username'];
+
                 ?>
                 <script type="text/javascript">
                     window.location = "demo.php";

@@ -232,6 +232,9 @@ input[type=number] {
     min-width: 20%;
 }
 
+
+
+/* TABLE ALL EXAMS */
 .exams__all-exams {
     table-layout: auto;
     width: 40%;
@@ -244,8 +247,6 @@ input[type=number] {
     font-size: 1.2rem;
 }
 
-
-/* TABLE HEADER TITLES */
 .exams__all-exams thead tr th:nth-child(1) {
     width: 15%;
 }
@@ -262,7 +263,6 @@ input[type=number] {
     width: 35%;
 }
 
-
 .exams__all-exams tbody tr td:last-child {
     text-align: right;
 }
@@ -278,6 +278,56 @@ input[type=number] {
     padding: .4rem 1rem;
     font-size: .7rem;
     font-weight: bold;
+}
+
+
+
+/* TABLE ALL QUESTIONS */
+.exams__all-questions {
+    table-layout: auto;
+    width: 90%;
+    margin: auto;
+    border-collapse:separate; 
+    border-spacing: .7rem;
+}
+
+.exams__all-questions thead {
+    font-size: 1.2rem;
+}
+
+.exams__all-questions thead tr th:nth-child(1) {
+    width: 10%;
+}
+
+.exams__all-questions thead tr th:nth-child(2) {
+    width: 35%;
+}
+
+.exams__all-questions thead tr th:nth-child(3) {
+    width: 15%;
+}
+
+.exams__all-questions thead tr th:nth-child(4) {
+    width: 15%;
+}
+
+.exams__all-questions thead tr th:nth-child(5) {
+    width: 15%;
+}
+
+.exams__all-questions thead tr th:nth-child(6) {
+    width: 10%;
+}
+
+.exams__all-questions tbody tr td:last-child {
+    text-align: right;
+}
+
+.exams__all-questions tbody::before {
+    content: "-";
+    display: block;
+    line-height: .3rem;
+    color: transparent;
 }
 
 
