@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------- CSS ------>
+    <!-- Index -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Navbar -->
+    <link rel="stylesheet" href="./css/header.css">
+    <!-- Footer -->
+    <link rel="stylesheet" href="./css/footer.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo.svg" type="image/svg">
+    <!-- Title -->
+    <title>QCM Maker</title>
+</head>
+<body>
+    <header>
+        <div class="qcm-header__logo">
+            <img src="./assets/logo.svg" alt="logo" />
+            <h3>QCM Maker</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.php">Home</a></li>
+                <li><a href="select_exam.php">Exams</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="logout.php" class="btn btn--header">Log out</a></li>
+            </ul>
+        </nav>
+        <script type="text/javascript">
+            setInterval(function(){
+                timer();
+            }, 1000);
+            function timer()
+            {
+                var xmlhttp=new XMLHttpRequest();
+                xmlhttp.onreadystatechange=function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+                        if(xmlhttp.responseText=="00:00:01")
+                        {
+                            window.location="result.php";
+                        }
+
+                        document.getElementById("countdowntimer").innerHTML=xmlhttp.responseText;
+
+                    }
+                };
+                xmlhttp.open("GET","forajax/load_timer.php", true);
+                xmlhttp.send(null);
+            }
+        </script>
+    </header>
+
+
+
+
+    <!-- <?php
+    session_start();
+    if (!isset($_SESSION['username'])) {
+        ?>
+        <script type="text/javascript">
+            window.location = "login.php";
+        </script>
+        <?php
+    }
+    ?>
+    
+    <?php
+    include 'header.php';
+    include 'connection.php';
+    ?> -->
+    
+    
+    <div class="container">
+        <section class="exams">
+            <h1>Geography<!-- <?php echo $_SESSION['exam_name']; ?> --></h1>
+            <p class="exams__presentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque voluptatum voluptate quaerat quisquam itaque vitae quos adipisci explicabo consequatur?</p>
+            <div class="exams__box-all-exams">
+                <div id="countdowntimer"></div>
+                <div class="exams__title">
+                    <h2>Question 1</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- <?php
+        include 'footer.php';
+        ?> -->
+
+    <footer>
+        <p>&copy; 2021 — In the Cyti</p>
+        <p>By Cyprien adn Timothée</p>
+    </footer>
+</div>
+
+<script type="text/javascript">
+    // Load number of questions
+    function load_total_que() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status==200) {
+                document.getElementById("total_que").innerHTML = xmlhttp.responseText;
+            }
+        };
+        xmlhttp.open("GET", "forajax/load_total_que.php", true);
+        xmlhttp.send(null);
+    }
+
+    // Load all questions
+    function load_questions(question_no) {
+        document.getElementById("current_que").innerHTML = question_no;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status==200) {
+                if (xmlhttp.responseText=="over") {
+                    window.location="result.php";
+                }
+                else {
+                    document.getElementById("load_questions").innerHTML = xmlhttp.responseText;
+                    load_total_que();
+                }
+            }
+        };
+        xmlhttp.open("GET", "forajax/load_questions.php?question_no=" + question_no, true);
+        xmlhttp.send(null);
+    }
+
+    // Load previous question
+    function load_previous() {
+        if (question_no == "1") {
+            load_questions(question_no);
+        }
+        else {
+            question_no = eval(question_no)-1;
+            load_questions(question_no);
+        }
+    }
+
+    // Load next question
+    function load_next() {  
+        question_no = eval(question_no)+1;
+        load_questions(question_no);
+    }
+
+
+    
+    var question_no = "1";
+    load_questions(question_no);
+
+</script>
+    
+</body>
+</html>
+
+
+
+    
