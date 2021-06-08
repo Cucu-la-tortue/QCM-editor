@@ -12,7 +12,7 @@ include 'header.php';
         <h1>Hi <?php echo $_SESSION['username'];?> !</h1>
         <p class="qcm-actions__presentation">Welcome to your online MCQ site. Here you will find all the MCQs put online by your teacher.</p>
         <ul class="qcm-actions__all-actions">
-            <li>
+            <li class="exams__box-all-exams">
                 <div class="qcm-actions__title">
                     <h2>Select an exam</h2>
                     <img src="./assets/exam-icon.svg" alt="icon">
@@ -21,7 +21,7 @@ include 'header.php';
                 <a href="select_exam.php" class="btn btn--actions">Select</a>
                 
             </li>
-            <li>
+            <li class="exams__box-all-exams">
                 <div class="qcm-actions__title">
                     <h2>View last results</h2>
                     <img src="./assets/results-icon.svg" alt="icon">
@@ -29,7 +29,7 @@ include 'header.php';
                 <p class="qcm-actions__details">Want to see your results? It's not impossible. You will find the results of your previous exams here.</p>
                 <a href="#" class="btn btn--actions">Results</a>
             </li>
-            <li>
+            <li class="exams__box-all-exams">
                 <div class="qcm-actions__title">
                     <h2>Log out</h2>
                     <img src="./assets/exit-icon.svg" alt="icon">

@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    padding: 0;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -80,14 +84,6 @@ input[type="button"] {
 
 .qcm-actions li {
     flex: 3;
-    display: flex;
-    flex-direction: column;
-    min-width: 10rem;
-    list-style-type: none;
-    padding: 2rem 3rem;
-    border: 1px solid rgba(168, 168, 168, 0.2);
-    border-radius: 2rem;
-    box-shadow: 0 2.5rem 5rem rgba(12, 117, 253, 0.2);
 }
 
 .qcm-actions li:last-child {
@@ -121,6 +117,18 @@ input[type="button"] {
     font-weight: bold;
     margin: auto;
     margin-top: 3rem;
+}
+
+.btn--delete {
+    padding: .4rem 1rem;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+.btn--question {
+    padding: .5rem 1.1rem;
+    font-size: .9rem;
+    font-weight: bold;
 }
 
 
@@ -159,8 +167,9 @@ input[type="button"] {
     padding: 2rem 3rem;
     border: 1px solid rgba(168, 168, 168, 0.2);
     border-radius: 2rem;
-    box-shadow: 0 2.5rem 5rem rgba(86, 0, 148, 0.2);
+    box-shadow: 0 2.5rem 5rem rgba(12, 117, 253, 0.2);
 }
+
 
 .exams__title {
     display: flex;
@@ -215,15 +224,48 @@ input[type="button"] {
     color: transparent;
 }
 
-.btn--delete {
-    padding: .4rem 1rem;
-    font-size: .7rem;
-    font-weight: bold;
+.exams__question-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #countdowntimer {
     text-align: right;
 }
+
+.exams__question-all-answers {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.exams__question-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+}
+
+.exams__question-answer {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.exams__question {
+    font-size: 1.2rem;
+    color: black;
+    opacity: 1;
+    font-weight: bold;
+}
+
+.exams__question-no {
+    font-weight: normal;
+}
+
 
 
 

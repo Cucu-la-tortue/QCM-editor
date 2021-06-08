@@ -17,7 +17,7 @@
     <title>QCM Maker</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="qcm-header__logo">
             <img src="./assets/logo.svg" alt="logo" />
             <h3>QCM Maker</h3>
