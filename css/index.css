@@ -236,7 +236,20 @@ input[type="button"] {
     max-width: 5rem;
   }
   
+.computer {
+    max-width: 27vw;
+    min-width: 40vw;
+    margin-left: 5rem;
+    margin-top: 0;
+    min-height: 0;
+}
   
+.image_position {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+}
   
 .qcm__presentation {
     flex: 1;
@@ -246,7 +259,9 @@ input[type="button"] {
 
 .qcm__presentation p {
     text-align: center;
-    opacity: .8;    
+    opacity: .8;
+    max-width: 70%;
+    margin: auto;
 }
 
 .title {
@@ -254,6 +269,11 @@ input[type="button"] {
     flex-direction: row;
     gap: 2rem;
     align-items: center;
+    margin-left: 5rem;
+}
+
+.title h1 {
+    font-size: 3rem;
 }
 
 
@@ -261,7 +281,7 @@ input[type="button"] {
 
 .qcm-action-box {
     flex: 1;
-display: flex;
+    display: flex;
     flex-direction: column;
     min-width: 10rem;
     list-style-type: none;
@@ -269,13 +289,13 @@ display: flex;
     border: 1px solid rgba(168, 168, 168, 0.2);
     border-radius: 2rem;
     box-shadow: 0 2.5rem 5rem rgba(12, 117, 253, 0.2);
+    margin-top: 5rem;
 }
 
 .main-page {
     display: flex;
     flex-direction: row;
-    margin-top: 8rem;
-    align-items: center;
+    margin-top: 3rem;
     justify-content: space-between;
-    gap: 20vw;
+    gap: 15vw;
 }  
