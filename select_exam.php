@@ -8,11 +8,11 @@ include 'connection.php';
 <div class="container">
     <section class="exams">
         <h1>Your exams</h1>
-        <p class="exams__presentation">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam atque voluptatum voluptate quaerat quisquam itaque vitae quos adipisci explicabo consequatur?</p>
+        <p class="exams__presentation">You are now on the page that contains all the exams uploaded by your teachers. We hope you have studied well and we wish you good results!</p>
         <div class="exams__box-all-exams">
             <div class="exams__title">
                 <h2>Sum Up</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, culpa!</p>
+                <p>Choose your exam and don't forget to keep an eye on the clock.</p>
             </div>
             <table class="exams__all-exams">
                 <thead>

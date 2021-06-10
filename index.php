@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <!-- header -->
     <link rel="stylesheet" href="./css/header.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo.svg" type="image/svg">
 </head>
 <body>
   <header>
@@ -37,17 +39,18 @@
           <img src="./assets/logo.svg" alt="logo">
           <h1>Your online MCQs</h1>
         </div>
-        <p>Here you are in your online MCQs site. Solve your personalized MCQs and have your friends test you!</p>
+        <p>Here you are on your online MCQs site. Solve your personalized MCQs and have your friends test you!</p>
       </div>
       
     </div>
     <div class='qcm-action-box'>
-      <div class="qcm-actions__title">
+      <div class="qcm-actions__title_page">
           <h2>What about us?</h2>
-          <img src="./assets/exit-icon.svg" alt="icon">
       </div>
-      <p class="qcm-actions__details">Session over? Don't forget to log out! See you soon on QCM Maker.</p>
-      <a href="#" class="btn btn--actions">Tschuss</a>
+      <p class="qcm-actions__details">Our company is committed to making it easy for all teachers who want to do away with handwritten exams and prefer secure online exams.</p>
+      <p class="qcm-actions__details">Our duty is to transform the future of high schools by offering simple, effective and easy solutions to anyone who needs them.</p>
+      <p class="qcm-actions__details">Of course, our company keeps for the environment a deep respect, which makes this website totally eco-responsible, avoiding at the same time the printing of unnecessary paper.</p>
+      <a href="#" class="btn btn--actions">Admin</a>
     </div>
 
   </section>

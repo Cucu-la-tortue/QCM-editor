@@ -8,7 +8,7 @@ include 'header.php';
 <div class="container">
     <section class="exams">
         <h1>Last results</h1>
-        <p class="exams__presentation">Here you are on the page where you can find all your prepared exams. You can create new ones or remove them as you wish.</p>
+        <p class="exams__presentation">You wanna know if your students studied? Check out their results.</p>
         <div class="results__box-all-results">
             <?php
                 $request = $bdd->query("SELECT * FROM exam_results ORDER BY id DESC") or die(print_r($bdd->errorInfo()));

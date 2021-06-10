@@ -373,13 +373,25 @@ input[type="button"] {
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-width: 10rem;
     list-style-type: none;
     padding: 2rem 3rem;
     border: 1px solid rgba(168, 168, 168, 0.2);
     border-radius: 2rem;
     box-shadow: 0 2.5rem 5rem rgba(12, 117, 253, 0.2);
-    margin-top: 5rem;
+    margin-top: 1rem;
+}
+
+.qcm-actions__details {
+    opacity: .8;
+}
+
+.qcm-actions__title_page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
 .main-page {
@@ -387,5 +399,5 @@ input[type="button"] {
     flex-direction: row;
     margin-top: 3rem;
     justify-content: space-between;
-    gap: 15vw;
+    gap: 7vw;
 }  

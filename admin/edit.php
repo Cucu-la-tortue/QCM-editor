@@ -15,7 +15,7 @@ while ($row = $request->fetch()) {
 <div class="container">
     <section class="exams">
         <h1><?php echo $exam_name; ?></h1>
-        <p class="exams__presentation">Here are your different QCUs. You can modify them to make it more challenging for your students.</p>
+        <p class="exams__presentation">Here are your different QCMs. You can modify them to make it more challenging for your students.</p>
         <ul>
             <li>
                 <div class="exams__title">
@@ -78,7 +78,7 @@ while ($row = $request->fetch()) {
             <li>
                 <div class="exams__title">
                     <h2>Add questions to <?php echo $exam_name; ?></h2>
-                    <p class="exams__details">Add and remove questions from your QCU</p>
+                    <p class="exams__details">Add and remove questions from your QCM</p>
                 </div>
                 <form action="" method="post" class="exam__question-form">
                     <div class="box-input-label box-input-label--question">
