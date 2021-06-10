@@ -62,7 +62,7 @@
         xmlhttp.send(null);
     }
 
-    // 
+    // Save answer selected
     function radioclick(radiovalue, question_no) {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {

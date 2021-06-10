@@ -58,6 +58,7 @@ include 'connection.php';
                 }
             };
             xmlhttp.open("GET", "forajax/set_exam_type_session.php?exam_name="+ exam_name, true);
+            xmlhttp.open("GET", "forajax/change_question_no.php", true);
             xmlhttp.send(null);
         }
     </script>
