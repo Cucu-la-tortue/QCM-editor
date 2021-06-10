@@ -1,4 +1,5 @@
 <?php
+include "redirect_login.php";
 include "../connection.php";
 $request = $bdd->prepare("SELECT * FROM exam_category WHERE name = ?") or die(print_r($bdd->errorInfo()));
 $request->execute(array($_GET['name_exam']));

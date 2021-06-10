@@ -26,8 +26,8 @@
             <ul>
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="exams.php">Exams</a></li>
-                <li><a href="#">Results</a></li>
-                <li><a href="#" class="btn btn--header">Log out</a></li>
+                <li><a href="all_results.php">Results</a></li>
+                <li><a href="logout.php" class="btn btn--header">Log out</a></li>
             </ul>
         </nav>
     </header>

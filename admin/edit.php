@@ -1,4 +1,5 @@
 <?php
+include "redirect_login.php";
 include 'header.php';
 include '../connection.php';
 
@@ -93,7 +94,7 @@ while ($row = $request->fetch()) {
                         <input type="text" name="optB" placeholder="Paris">
                     </div>
                     <div class="box-input-label box-input-label--question">
-                        <label for="optC">Option c</label>
+                        <label for="optC">Option C</label>
                         <input type="text" name="optC" placeholder="Versailles">
                     </div>
                     <div class="box-input-label--answer">
@@ -139,6 +140,7 @@ while ($row = $request->fetch()) {
             }
 
             $loop = $loop + 1;
+            $answer_letter = 'opt' . $_POST['answer'];
             $request3 = $bdd->prepare("INSERT INTO questions(question_no, question, optA, optB, optC, answer, name) VALUES(:question_no, :question, :optA, :optB, :optC, :answer, :name)") or die(print_r($bdd->errorInfo()));
             $request3->execute(array(
                 'question_no' => $loop,
@@ -146,7 +148,7 @@ while ($row = $request->fetch()) {
                 'optA' => $_POST['optA'],
                 'optB' => $_POST['optB'],
                 'optC' => $_POST['optC'],
-                'answer' => $_POST['answer'],
+                'answer' => $_POST[$answer_letter], // on envoie la lettre correcte et non la question
                 'name' => $exam_name
             ));
             

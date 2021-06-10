@@ -1,5 +1,6 @@
 <!-- INCLUDE HEADER -->
 <?php
+include "redirect_login.php";
 include 'header.php';
 ?>
 
@@ -26,7 +27,7 @@ include 'header.php';
                     <img src="./assets/results-icon.svg" alt="icon">
                 </div>
                 <p class="dashboard__details">Look at your students' results to admire their failures.</p>
-                <a href="#" class="btn btn--dashboard">Results</a>
+                <a href="all_results.php" class="btn btn--dashboard">Results</a>
             </li>
             <li>
                 <div class="dashboard__title">
@@ -34,7 +35,7 @@ include 'header.php';
                     <img src="./assets/exit-icon.svg" alt="icon">
                 </div>
                 <p class="dashboard__details">Satisfied? See you later on QCM Maker!</p>
-                <a href="#" class="btn btn--dashboard">Tschuss</a>
+                <a href="logout.php" class="btn btn--dashboard">Tschuss</a>
             </li>
         </ul>
     </section>

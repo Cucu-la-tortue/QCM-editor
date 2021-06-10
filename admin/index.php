@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../connection.php";
 ?>
 
@@ -23,14 +24,12 @@ include "../connection.php";
                 <label for="password">Password</label>
                 <input type="password" name="password" placeholder="**********" required>
             </div>
-            <input class='btn-submit' name="btn-login" type="submit" value="Login" style="background-color: #560094;">
+            <input class='btn-submit--admin btn-submit' name="btn-login" type="submit" value="Login">
         </form>
 
         <div class="alert alert-danger" id="failure" style="margin-top: 1.5rem;">
             <strong>Invalid !</strong> Invalid Username Or Password
         </div>
-
-        <a class="already-registered" href="register.php">Create your account</a>
     </section>
     
     <?php
@@ -52,6 +51,7 @@ include "../connection.php";
 
             // Sinon, on accède au dashboard
             else {
+                $_SESSION['admin_name'] = $_POST['username'];
                 ?>
                 <script>
                     window.location = "dashboard.php";

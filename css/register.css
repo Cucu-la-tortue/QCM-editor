@@ -75,6 +75,11 @@ form label {
     background-color:dodgerblue;
 }
 
+.btn-submit--admin {
+    background-color: #560094;
+    margin-bottom: 1rem;
+}
+
 .btn-submit:hover {
     cursor: pointer;
     background-color: rgb(0, 109, 218);

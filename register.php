@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'connection.php';
 ?>
 
@@ -67,6 +68,7 @@
                 // Sinon, on enregistre le nom d'utilisateur dans la base de données
                 else {
                     $bdd->exec("INSERT INTO registration(firstname, lastname, username, password) VALUES('$_POST[firstname]', '$_POST[lastname]', '$_POST[username]', '$_POST[password]')") or die(print_r($bdd->errorInfo()));
+                    $_SESSION['username'] = $_POST['username'];
                     ?>
                     <script type="text/javascript">
                         window.location = "dashboard.php";

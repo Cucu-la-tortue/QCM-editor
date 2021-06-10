@@ -1,6 +1,6 @@
 <!-- INCLUDE HEADER -->
 <?php
-session_start();
+include 'redirect_login.php';
 include 'header.php';
 ?>
 
@@ -27,7 +27,7 @@ include 'header.php';
                     <img src="./assets/results-icon.svg" alt="icon">
                 </div>
                 <p class="qcm-actions__details">Want to see your results? It's not impossible. You will find the results of your previous exams here.</p>
-                <a href="#" class="btn btn--actions">Results</a>
+                <a href="all_results.php" class="btn btn--actions">Results</a>
             </li>
             <li class="exams__box-all-exams">
                 <div class="qcm-actions__title">

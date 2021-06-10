@@ -1,5 +1,6 @@
 <!-- INCLUDE HEADER -->
 <?php
+include "redirect_login.php";
 include 'header.php';
 include '../connection.php';
 ?>

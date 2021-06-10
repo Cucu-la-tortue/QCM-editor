@@ -196,7 +196,7 @@ input[type=number] {
     margin-bottom: 10rem;
 }
 
-.exams ul li {
+.exams ul li, .results__box-all-results {
     display: flex;
     flex-direction: column;
     min-width: 10rem;
@@ -362,4 +362,64 @@ input[type=number] {
     border: solid grey 1px;
     padding: 0 .8rem;
     width: fit-content;
+}
+
+
+
+
+
+
+/* ALL RESULTS */
+.results__box-all-results h2 {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.results__all-results {
+    table-layout: auto;
+    width: 70%;
+    margin: auto;
+    border-collapse:separate; 
+    border-spacing: .7rem;
+}
+
+.results__all-results thead {
+    font-size: 1.2rem;
+}
+
+.results__all-results thead th {
+    text-align: left;
+}
+
+.results__all-results thead tr th:nth-child(1) {
+    width: 10%;
+}
+
+.results__all-results thead tr th:nth-child(2) {
+    width: 30%;
+}
+
+.results__all-results thead tr th:nth-child(3) {
+    width: 30%;
+}
+
+.results__all-results thead tr th:nth-child(4) {
+    width: 10%;
+}
+
+.results__all-results thead tr th:last-child {
+    width: 20%;
+    text-align: right;
+}
+
+.results__all-results tbody tr td:last-child {
+    text-align: right;
+}
+
+.results__all-results tbody::before {
+    content: "-";
+    display: block;
+    line-height: .3rem;
+    color: transparent;
 }

@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="dashboard.php">Home</a></li>
                 <li><a href="select_exam.php">Exams</a></li>
-                <li><a href="#">Results</a></li>
+                <li><a href="all_results.php">Results</a></li>
                 <li><a href="logout.php" class="btn btn--header">Log out</a></li>
             </ul>
         </nav>
