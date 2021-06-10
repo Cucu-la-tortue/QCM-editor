@@ -50,7 +50,7 @@
       <p class="qcm-actions__details">Our company is committed to making it easy for all teachers who want to do away with handwritten exams and prefer secure online exams.</p>
       <p class="qcm-actions__details">Our duty is to transform the future of high schools by offering simple, effective and easy solutions to anyone who needs them.</p>
       <p class="qcm-actions__details">Of course, our company keeps for the environment a deep respect, which makes this website totally eco-responsible, avoiding at the same time the printing of unnecessary paper.</p>
-      <a href="#" class="btn btn--actions">Admin</a>
+      <a href="admin/index.php" class="btn btn--actions">I am a teacher</a>
     </div>
 
   </section>

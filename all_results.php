@@ -41,13 +41,18 @@ include 'header.php';
                         $exam_date = $row['exam_time'];
                         $nb_correct = $row['correct_answer'];
                         $nb_questions = $row['total_question'];
+                        $nb_wrong = $row['wrong_answer'];
+                        $grade = round(($nb_correct - 0.5*$nb_wrong)*20/$nb_questions, 1);
+                        if ($grade < 0) {
+                            $grade = 0;
+                        }
                         $no_exam++;
 
                         ?>
                         <tr>
                             <td><?php echo $no_exam;?></td>
                             <td><?php echo $exam_name;?></td>
-                            <td><?php echo $nb_correct . "/" . $nb_questions;?></td>
+                            <td><?php echo $grade . "/20";?></td>
                             <td><?php echo $exam_date;?></td>
                         </tr>
                         <?php

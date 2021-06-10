@@ -64,6 +64,7 @@
 
     // Save answer selected
     function radioclick(radiovalue, question_no) {
+        
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status==200) {

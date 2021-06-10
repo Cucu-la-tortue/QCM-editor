@@ -10,6 +10,8 @@ include "../connection.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/register.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo.svg" type="image/svg">
     <title>Login</title>
 </head>
 <body>

@@ -170,6 +170,12 @@ input[type="button"] {
     box-shadow: 0 2.5rem 5rem rgba(12, 117, 253, 0.2);
 }
 
+.exams__box-all-exams h2 {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
 
 .exams__title {
     display: flex;
@@ -310,6 +316,50 @@ input[type="button"] {
 }
 
 .results__all-results tbody::before {
+    content: "-";
+    display: block;
+    line-height: .3rem;
+    color: transparent;
+}
+
+
+
+
+
+/* RESULT EXAM PAGE */
+.questions__all-results {
+    table-layout: auto;
+    max-width: 90%;
+    margin: auto;
+    border-collapse:separate; 
+    border-spacing: 2rem;
+}
+
+.questions__all-results thead {
+    font-size: 1.2rem;
+}
+
+.questions__all-results thead tr th, .questions__all-results tbody tr td {
+    text-align: center;
+}
+
+.questions__all-results thead tr th:nth-child(1) {
+    width: 15%;
+}
+
+.questions__all-results thead tr th:nth-child(2) {
+    width: 55%;
+}
+
+.questions__all-results thead tr th:nth-child(3) {
+    width: 15%;
+}
+
+.questions__all-results thead tr th:nth-child(4) {
+    width: 15%;
+}
+
+.questions__all-results tbody::before {
     content: "-";
     display: block;
     line-height: .3rem;
